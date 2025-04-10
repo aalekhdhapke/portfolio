@@ -17,34 +17,55 @@
       crossorigin="anonymous"
     />
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Baskervville+SC&family=Bebas+Neue&family=Bungee+Spice&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Luxurious+Script&family=Matemasie&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic+Coding:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Slabo+27px&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="./images/cropped_image.png" />
 
+</html></body>
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        new bootstrap.Collapse(navbarCollapse).toggle();
+      }
+    });
+  });
+</script>
+
+
     <style>
       html{
-        
+        scroll-behavior: smooth;
       }
       body {
-       /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-aJLiEo0tqX1ZTCvWbyETwf3Y1dL69dW_UHy8VwEED2r8FCbmuKsCm43Y7HEh0HuykwQ&usqp=CAU);
-       background-size: 100% 100%; */
-
-  background-color: #000000db;
+  /* background-color: #000000db; */
+  background: #002f49ec;
         color: #fff;
         margin: 0;
-        font-family: "Abel", sans-serif;
+        font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 99vw;
       }
 
       section {
@@ -53,20 +74,20 @@
         justify-content: center;
         flex-direction: column;
         height: 100vh;
-        width: 98vw;
+        width: 100vw;
         margin: 0 auto;
         padding: 20px;
       }
 
       /* Navbar  */
       .navbar {
+        background: #002e47;
         width: 100%;
         padding: 10px 20px;
-        background-color: #121212;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 0 12px 40px rgba(0, 0, 0, 0.2);
         position: fixed;
         top: 0;
         z-index: 1000;
@@ -182,73 +203,132 @@
     
 
       /* Projects Section */
-     
-      /* Projects Section */
-      .projects-section {
-  padding: 50px 0;
-  text-align: center;
+/* Projects Section */
+.project-tab-section {
+  background: #003049;
+  padding: 80px 0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 110vh;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  color: #fff; /* White text for contrast */
-  margin-bottom: 10px;
+.tab-container {
+  display: flex;
+  width: 100vw;              /* ✅ Full viewport width */
+  height: 100vh;             /* ✅ Full viewport height */
+  margin: auto;
+  background: #03465f;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
 }
 
-.section-subtitle {
-  font-size: 1.2rem;
-  color: #bbb; /* Lighter gray for readability */
-  margin-bottom: 30px;
+.tab-container input[type="radio"] {
+  display: none;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  padding: 20px;
+.tab-sidebar {
+  width: 250px;
+  background: #022c43;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
 }
 
-.project-card {
-  background: #111; /* Darker card background */
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* Softer white glow */
-  padding: 20px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Brighter glow */
-}
-
-.project-card h3 {
-  font-size: 1.6rem;
-  color: #00bfff; /* Bright blue for emphasis */
-}
-
-.project-card p {
-  font-size: 1rem;
-  color: #ddd; /* Light gray for contrast */
-  margin: 10px 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border: none;
+.tab-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 30px;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
   font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+  transition: 0.3s;
 }
 
-.btn:hover {
-  background: #0056b3;
-  transform: scale(1.05);
+.tab-link:hover {
+  background: #004f71;
 }
 
-      /* Contact Section */
+#project1:checked ~ .tab-sidebar label[for="project1"],
+#project2:checked ~ .tab-sidebar label[for="project2"],
+#project3:checked ~ .tab-sidebar label[for="project3"] {
+  background: #ffc300;
+  color: #003049;
+}
+
+.tab-content {
+  padding: 60px;
+  flex-grow: 1;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-content .content {
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+  max-width: 700px;
+}
+
+#project1:checked ~ .tab-content #content1,
+#project2:checked ~ .tab-content #content2,
+#project3:checked ~ .tab-content #content3 {
+  display: block;
+}
+
+.icon {
+  font-size: 70px;
+  margin-bottom: 30px;
+  background: #ffc300;
+  color: #003049;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.tab-content h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.tab-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .tab-container {
+    flex-direction: column;
+    height: auto;            /* Keep it flexible for small screens */
+    width: 100%;
+  }
+
+  .tab-sidebar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+
+  .tab-link {
+    flex-direction: column;
+    font-size: 16px;
+    gap: 5px;
+  }
+
+  .tab-content {
+    padding: 40px 20px;
+  }
+}
+  /* Contact Section */
       .contact-header {
     color: #bbbb;
     font-family: 'Arial', sans-serif;
@@ -315,12 +395,15 @@
       .footer-body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #111;
       color: #ccc;
+background-color: transparent;
+box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+
+
     }
       .footer {
-      background-color: #1a1a1a;
-      padding: 40px 80px;
+  
+        padding: 40px 80px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -414,18 +497,7 @@
       }
 
       @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 20px;
-  }
-  .navbar-brand {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  .nav-item a {
-    margin: 10px 0;
-    font-size: 16px;
-  }
+  
   
   /* Adjust home section */
   #home h1 {
@@ -479,16 +551,25 @@
   <body id="top">
     
     <!-- Navigation -->
-    <nav class="navbar">
-      <a class="navbar-brand" href="#top">Aalekh Dhapke</a>
-      <div class="nav-items">
-        <span class="nav-item"><a href="#top">Home</a></span>
-        <span class="nav-item"><a href="#about">About</a></span>
-        <span class="nav-item"><a href="#projects">Projects</a></span>
-        <span class="nav-item"><a href="#skill">Skills</a></span>
-        <span class="nav-item"><a href="#contact">Contact</a></span>
+
+    <nav class="navbar navbar-expand-md navbar-dark  fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#top">Aalekh Dhapke</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#top">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#skill">Skills</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
+        </div>
       </div>
     </nav>
+  
 
     <!-- Home Section -->
 
@@ -499,12 +580,14 @@
       <div class="container">
         <div class="row align-items-center">
           <!-- Text Content -->
+           <br>
+           <br>
           <div class="col-md-6 text-white">
             <h1>
               Welcome to my <span style="color: #2bd0ab;">Portfolio!</span>
             </h1>
           
-            
+                
             <p class="mt-4">
               I am skilled in HTML, CSS, React.js, JavaScript, Node.js, and Sass. I specialize in developing interactive, responsive, and visually appealing user interfaces while ensuring seamless functionality on both the front end and back end. I am passionate about optimizing performance, enhancing user experience, and implementing scalable solutions for web applications.
             </p>
@@ -586,49 +669,58 @@
     <br />
     <br />
     <!-- Projects Section -->
-    <div id="projects" class="projects">
      <!-- Projects Section -->
-     <section id="projects" class="projects-section">
-      <div class="container text-center">
-        <h2 class="text-center text-uppercase fw-bold" style="color: #2bd0ab;">
-          My Projects        </h2>
-        <p style="color:#2bd0ab ;">Here are some of my best works.</p>
+     <section id="projects" class="project-tab-section">
+      <div class="tab-container">
+        <!-- Radio Buttons -->
+        <input type="radio" name="tabset" id="project1" checked>
+        <input type="radio" name="tabset" id="project2">
+        <input type="radio" name="tabset" id="project3">
+        <input type="radio" name="tabset" id="project4">
+        <input type="radio" name="tabset" id="project3">
+
     
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <h3>HTML</h3>
-            <p>A responsive and interactive HTML project.</p>
-            <a href="./html.html" class="btn">View Project</a>
-          </div>
+        <!-- Sidebar Tabs -->
+        <aside class="tab-sidebar">
+          <label for="project1" class="tab-link">
+            <i class="fa fa-code"></i>
+            <span>Html</span>
+          </label>
+          <label for="project2" class="tab-link">
+            <i class="fa fa-paint-brush"></i>
+            <span>css</span>
+          </label>
+          <label for="project3" class="tab-link">
+            <i class="fa fa-gamepad"></i>
+            <span>JavaScript</span>
+          </label>
+          <label for="project4" class="tab-link">
+            <i class="fa fa-gamepad"></i>
+            <span>bootstrap</span>
+          </label>   
+          <label for="project5" class="tab-link">
+            <i class="fa fa-gamepad"></i>
+            <span>Reactjs</span>
+          </label>
+        </aside>
     
-          <!-- Project 2 -->
-          <div class="project-card">
-            <h3>CSS</h3>
-            <p>A collection of stylish and responsive CSS projects.</p>
-            <a href="./css.html" class="btn">View Project</a>
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- <div class="content" id="content1">
+            <i class="fa fa-code icon"></i>
+            <h2>This is Web App Project</h2>
+            <p>This project showcases a responsive to-do list built using HTML, CSS, and JavaScript.</p>
           </div>
-    
-          <!-- Project 3 -->
-          <div class="project-card">
-            <h3>JavaScript</h3>
-            <p>A real-time weather forecast application using APIs.</p>
-            <a href="./js.html" class="btn">View Project</a>
+          <div class="content" id="content2">
+            <i class="fa fa-paint-brush icon"></i>
+            <h2>This is Design Project</h2>
+            <p>This project is a modern UI design made entirely with HTML and styled with CSS Flexbox/Grid.</p>
           </div>
-    
-          <!-- Project 4 -->
-          <div class="project-card">
-            <h3>ReactJS</h3>
-            <p>A dynamic and modern web application using ReactJS.</p>
-            <a href="#" class="btn">View Project</a>
-          </div>
-    
-          <!-- Project 5 -->
-          <div class="project-card">
-            <h3>Bootstrap</h3>
-            <p>Responsive and visually appealing Bootstrap projects.</p>
-            <a href="#" class="btn">View Project</a>
-          </div>
+          <div class="content" id="content3">
+            <i class="fa fa-gamepad icon"></i>
+            <h2>This is Game Project</h2>
+            <p>This project is a CSS-only mini game with transitions and keyframe animations.</p>
+          </div> -->
         </div>
       </div>
     </section>
@@ -804,7 +896,9 @@
   </div></a>
   </footer>
   </div>
-    
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
 
