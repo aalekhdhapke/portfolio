@@ -210,173 +210,178 @@
 
       /* Projects Section */
       .project-tab-section {
-        padding: 80px 0;
-        font-family: "Segoe UI", sans-serif;
-        min-height: 110vh;
-      }
+  padding: 80px 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #002f49ec;
+  min-height: 100vh;
+  color: #fff;
+}
 
-      .tab-container {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        margin: auto;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-      }
+.project-tab-section h2 {
+  color: #2bd0ab;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
 
-      .tab-container input[type="radio"] {
-        display: none;
-      }
+.tab-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+  background: #011c30ec;
+}
 
-      .tab-sidebar {
-        width: 250px;
-        background: #022c43d6;
-        display: flex;
-        flex-direction: column;
-        padding-top: 40px;
-      }
+/* Hide radio buttons */
+.tab-container input[type="radio"] {
+  display: none;
+}
 
-      .tab-link {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding: 20px 30px;
-        color: white;
-        cursor: pointer;
-        font-size: 20px;
-        font-weight: bold;
-        transition: 0.3s;
-      }
+/* Sidebar Tabs */
+.tab-sidebar {
+  width: 220px;
+  background: #011a28;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 30px 0;
+}
 
-      .tab-link:hover {
-        background: #004f71;
-      }
+.tab-link {
+  padding: 18px 20px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #ffffff;
+  border-left: 5px solid transparent;
+}
 
-      #project1:checked ~ .tab-sidebar label[for="project1"],
-      #project2:checked ~ .tab-sidebar label[for="project2"],
-      #project3:checked ~ .tab-sidebar label[for="project3"] {
-        background: #ffc300;
-        color: #002f49;
-      }
+.tab-link:hover {
+  background: #013b5a;
+  color: #2bd0ab;
+}
 
-      .tab-content {
-        padding: 20px;
-        margin-bottom: -10%;
-      }
+input#project1:checked ~ .tab-sidebar label[for="project1"],
+input#project2:checked ~ .tab-sidebar label[for="project2"],
+input#project3:checked ~ .tab-sidebar label[for="project3"],
+input#project4:checked ~ .tab-sidebar label[for="project4"],
+input#project5:checked ~ .tab-sidebar label[for="project5"] {
+  background: #2bd0ab;
+  color: #002f49;
+  font-weight: bold;
+  border-left: 5px solid #fff;
+}
 
-      .content1 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        text-align: center;
-      }
+/* Main Content Area */
+.tab-content {
+  flex-grow: 1;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  background: #002f49ec;
+}
 
-      .content1 a {
-        text-decoration: none;
-        color: #333;
-        transition: transform 0.3s ease, color 0.3s ease;
-        width: 150px;
-      }
+.content {
+  display: none;
+}
 
-      .content1 a:hover {
-        transform: scale(1.05);
-        color: #007bff;
-      }
+input#project1:checked ~ .tab-content .content1,
+input#project2:checked ~ .tab-content .content2,
+input#project3:checked ~ .tab-content .content3,
+input#project4:checked ~ .tab-content .content4,
+input#project5:checked ~ .tab-content .content5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
 
-      .content1 img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.3s ease;
-      }
+/* Project Card */
+.project-card {
+  background: #013a5c;
+  border-radius: 12px;
+  width: 260px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
 
-      .content1 img:hover {
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-      }
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
 
-      /* Optional: Responsive */
-      @media (max-width: 600px) {
-        .content1 {
-          flex-direction: column;
-          align-items: center;
-        }
+.project-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
 
-        .content1 a {
-          width: 80%;
-        }
-      }
+.project-card h4 {
+  color: #2bd0ab;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
 
-      /* Display content when radio is checked */
-      #project1:checked ~ .tab-content .content1,
-      #project2:checked ~ .tab-content .content2,
-      #project3:checked ~ .tab-content .content3,
-      #project4:checked ~ .tab-content .content4,
-      #project5:checked ~ .tab-content .content5 {
-        display: block;
-      }
+.project-card .buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 
-      /* Highlight active tab */
-      #project1:checked ~ .tab-sidebar label[for="project1"],
-      #project2:checked ~ .tab-sidebar label[for="project2"],
-      #project3:checked ~ .tab-sidebar label[for="project3"],
-      #project4:checked ~ .tab-sidebar label[for="project4"],
-      #project5:checked ~ .tab-sidebar label[for="project5"] {
-        background: #00bcd4;
-        color: white;
-      }
+.project-card .buttons a {
+  background: #2bd0ab;
+  color: #002f49;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
 
-      .icon {
-        font-size: 70px;
-        margin-bottom: 30px;
-        background: #3333338a;
-        color: #003049;
-        padding: 25px;
-        border-radius: 16px;
-      }
+.project-card .buttons a:hover {
+  background: #1be0c0;
+  color: #011a28;
+}
 
-      .tab-content p {
-        font-size: 18px;
-        line-height: 1.6;
-      }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tab-container {
+    flex-direction: column;
+  }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(15px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+  .tab-sidebar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
 
-      @media (max-width: 768px) {
-        .tab-container {
-          flex-direction: column;
-          height: auto;
-          width: 100vw;
-        }
+  .tab-link {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+  }
 
-        .tab-sidebar {
-          flex-direction: row;
-          width: 100vw;
-          justify-content: space-around;
-          padding: 20px 0;
-        }
+  .project-card {
+    width: 90%;
+  }
+}
 
-        .tab-link {
-          flex-direction: column;
-          font-size: 16px;
-          gap: 5px;
-        }
 
-        .tab-content {
-          padding: 40px 20px;
-        }
-      }
+/* contact section */
       .contact-header {
   font-family: "Arial", sans-serif;
   text-align: center;
@@ -887,7 +892,7 @@ body{
         <input type="radio" name="tabset" id="project3" />
         <input type="radio" name="tabset" id="project4" />
         <input type="radio" name="tabset" id="project5" />
-
+    
         <!-- Sidebar Tabs -->
         <aside class="tab-sidebar">
           <label for="project1" class="tab-link"><span>HTML</span></label>
@@ -896,52 +901,192 @@ body{
           <label for="project4" class="tab-link"><span>Bootstrap</span></label>
           <label for="project5" class="tab-link"><span>ReactJS</span></label>
         </aside>
-
+    
         <!-- Tab Content -->
         <div class="tab-content">
+          <!-- HTML Projects -->
           <div class="content content1">
-            <!-- <p>
-              <a href=" ">
-                <img
-                  style="height: 20vh; width: 10vw"
-                  src="https://swapps.com/wp-content/uploads/2017/01/image-post-flexbox-v2.png"
-                  alt=""
-                />
-                <br>
-                my flex layout
-              </a>
-              <a href=" ">
-                <img
-                  style="height: 20vh; width: 10vw"
-                  src="  https://i.ytimg.com/vi/nf_njLxQqeI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBncIbEbaCq5jVqRQHoNNqrZHtQjA "
-                  alt=""
-                />
-                <br>
-                my grid layout
-              </a>
-              <a href=" ">
-                <img
-                  style="height: 20vh; width: 10vw"
-                  src="https://i.ytimg.com/vi/OGqp1Nmq_F4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAtT3Aqr-gupgXlu0YIUWtqs8NZzg"
-                  alt=""
-                />
-                <br>
-                my table layout
-              </a>
-            </p> -->
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?html" alt="HTML Project 1">
+              <h3>HTML Blog Page</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?code" alt="HTML Project 2">
+              <h3>Portfolio Template</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?layout" alt="HTML Project 3">
+              <h3>HTML Layout</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?landingpage" alt="HTML Project 4">
+              <h3>Landing Page</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?webpage" alt="HTML Project 5">
+              <h3>Static Page</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?loginform" alt="HTML Project 6">
+              <h3>Login Page</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?signup" alt="HTML Project 7">
+              <h3>Signup Page</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?news" alt="HTML Project 8">
+              <h3>News Website</h3>
+            </div>
           </div>
+    
+          <!-- CSS Projects -->
           <div class="content content2">
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?css" alt="CSS Project 1">
+              <h3>Flexbox Layout</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?grid" alt="CSS Project 2">
+              <h3>CSS Grid Layout</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?button" alt="CSS Project 3">
+              <h3>Custom Buttons</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?hover" alt="CSS Project 4">
+              <h3>Hover Effects</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?animation" alt="CSS Project 5">
+              <h3>CSS Animation</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?navbar" alt="CSS Project 6">
+              <h3>Sticky Navbar</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?form" alt="CSS Project 7">
+              <h3>Styled Form</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?card" alt="CSS Project 8">
+              <h3>Card Design</h3>
+            </div>
           </div>
+    
+          <!-- JavaScript Projects -->
           <div class="content content3">
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?javascript" alt="JS Project 1">
+              <h3>To-Do App</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?calculator" alt="JS Project 2">
+              <h3>Calculator</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?clock" alt="JS Project 3">
+              <h3>Digital Clock</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?game" alt="JS Project 4">
+              <h3>Mini Game</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?quiz" alt="JS Project 5">
+              <h3>Quiz App</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?weather" alt="JS Project 6">
+              <h3>Weather App</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?search" alt="JS Project 7">
+              <h3>Search Filter</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?popup" alt="JS Project 8">
+              <h3>Modal Popup</h3>
+            </div>
           </div>
+    
+          <!-- Bootstrap Projects -->
           <div class="content content4">
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?bootstrap" alt="Bootstrap Project 1">
+              <h3>Bootstrap Portfolio</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?responsive" alt="Bootstrap Project 2">
+              <h3>Responsive Design</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?ecommerce" alt="Bootstrap Project 3">
+              <h3>E-commerce Page</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?carousel" alt="Bootstrap Project 4">
+              <h3>Image Carousel</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?navbar" alt="Bootstrap Project 5">
+              <h3>Navbar UI</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?grid" alt="Bootstrap Project 6">
+              <h3>Bootstrap Grid</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?contact" alt="Bootstrap Project 7">
+              <h3>Contact Form</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?footer" alt="Bootstrap Project 8">
+              <h3>Footer Design</h3>
+            </div>
           </div>
+    
+          <!-- ReactJS Projects -->
           <div class="content content5">
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?react" alt="React Project 1">
+              <h3>React Portfolio</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?app" alt="React Project 2">
+              <h3>Task Manager</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?dashboard" alt="React Project 3">
+              <h3>Admin Dashboard</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?blog" alt="React Project 4">
+              <h3>Blog App</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?data" alt="React Project 5">
+              <h3>API Data Fetch</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?weather" alt="React Project 6">
+              <h3>Weather Widget</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?music" alt="React Project 7">
+              <h3>Music Player</h3>
+            </div>
+            <div class="project-card">
+              <img src="https://source.unsplash.com/300x200/?chat" alt="React Project 8">
+              <h3>Chat App</h3>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
+    
     <!-- Skills Section -->
     <br />
     <br />
@@ -1058,8 +1203,8 @@ body{
             class="contact-item"
           >
             <div class="icon">💬</div>
-            <strong>Skype</strong>
-            <p>join Alekh on skype</p>
+            <strong>Team</strong>
+            <p>join Alekh on Team</p>
           </a>
         </div>
       </div>
@@ -1082,8 +1227,7 @@ body{
                 href="https://join.skype.com/invite/qLNg1suzJAgg"
                 style="font-size: 30px"
               >
-                <i class="bx bxl-skype"></i>
-              </a>
+              <i class='bx bxl-microsoft-teams'></i>              </a>
               <a
                 href=" https://www.linkedin.com/in/aalekh-dhapke-a2051a313/?otpToken=MTMwNjFkZTYxMjJmYzFjMGJjMjYwZmViNDExZGUzYjE4ZWNlZDQ0NzlmYWI4NjZiN2JjZTAxNmE0YzU4NTRmNmY1ZGNkNGU5NjZjNmNiZWI0M2IzZDBiYWE4M2U0ZGJhYzk2OTEyNDNhMjAwMGY4OTNkYjFmOWU0LDEsMQ%3D%3D&midSig=32uVv1ybjr6XA1&eid=m3figo-m4tmq7bp-yj&midToken=AQHFyrCGVjvEoA&trkEmail=eml-email_job_alert_digest_01-header-0-profile_glimmer-null-m3figo%7Em4tmq7bp%7Eyj-null-null&trk=eml-email_job_alert_digest_01-header-0-profile_glimmer&originalSubdomain=in"
                 style="font-size: 30px"
