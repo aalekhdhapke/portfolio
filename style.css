@@ -1,3 +1,32 @@
+
+html, body {
+  width: 99vw;
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 99vw;
+}
+.container, .wrapper {
+  max-width: 99vw;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 html {
         scroll-behavior: smooth;
       }
@@ -9,6 +38,7 @@ html {
         font-family: "Baskervville SC", serif;
         font-weight: 400;
         font-style: normal;
+        text-decoration: none;
       }
 
       section {
@@ -321,6 +351,12 @@ input#project5:checked ~ .tab-content .content5 {
 
 
 /* contact section */
+#contact {
+  padding: 80px 20px;  /* Top-Bottom 80px, Left-Right 20px */
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
       .contact-header {
   font-family: "Arial", sans-serif;
   text-align: center;
@@ -617,5 +653,10 @@ input#project5:checked ~ .tab-content .content5 {
 
   .tab-container {
     justify-content: center;
+  }
+}
+@media (max-width: 991.98px) {
+  .contact-container {
+    grid-template-columns: 1fr; /* Force 1 column layout */
   }
 }
