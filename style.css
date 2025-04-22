@@ -32,10 +32,10 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 65vh; 
+  min-height: 65vh; /* was height: 100vh */
   width: 100vw;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 20px; /* more balanced vertical spacing */
   box-sizing: border-box;
 }
 
