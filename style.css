@@ -148,7 +148,7 @@ section {
 .social-icons {
   justify-content: center;
   margin-left: 15%;
-  margin-top: -7%;
+  margin-top: -10%;
   flex-wrap: wrap;
 }
 
@@ -168,8 +168,25 @@ section {
   .social-icons {
     margin-left: 0;
     justify-content: center;
+    margin-top: -8%;
+
+  }}
+  @media (max-width: 404px) {
+    .social-icons {
+      margin-left: 0;
+      justify-content: center;
+      margin-top: -8%;
+  
+    }
   }
-}
+  @media (max-width: 600px) {
+    .social-icons {
+      margin-left: 0;
+      justify-content: center;
+      margin-top: -8%;
+  
+    }
+  }
 
 
 /* Stack icons in mobile view */
@@ -464,6 +481,7 @@ input#project5:checked ~ .tab-content .content5 {
   color: #ccc;
   background-color: transparent;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
 }
 .footer {
   padding: 40px 80px;
@@ -526,6 +544,7 @@ input#project5:checked ~ .tab-content .content5 {
 
 .footer .footer-contact p {
   margin: 5px 0;
+  text-decoration: none;
 }
 
 .footer .email {
@@ -533,6 +552,7 @@ input#project5:checked ~ .tab-content .content5 {
   align-items: center;
   margin-top: 5px;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .footer .email i {
@@ -547,7 +567,6 @@ input#project5:checked ~ .tab-content .content5 {
   font-size: 14px;
 }
 
-/* media query  to all the portfolio  */
 
 /* ==================== MEDIA QUERIES ==================== */
 
@@ -694,6 +713,6 @@ input#project5:checked ~ .tab-content .content5 {
 }
 @media (max-width: 991.98px) {
   .contact-container {
-    grid-template-columns: 1fr; /* Force 1 column layout */
+    grid-template-columns: 1fr; 
   }
 }
