@@ -148,7 +148,7 @@ section {
 .social-icons {
   justify-content: center;
   margin-left: 15%;
-  margin-top: -10%;
+  margin-top: -7%;
   flex-wrap: wrap;
 }
 
@@ -222,9 +222,9 @@ section {
 .project-tab-section {
   padding: 80px 0;
   font-family: "Segoe UI", sans-serif;
-  background: #002f49ec;
   min-height: 100vh;
   color: #fff;
+  max-width: 100%;
 }
 
 .project-tab-section h2 {
@@ -697,5 +697,3 @@ input#project5:checked ~ .tab-content .content5 {
     grid-template-columns: 1fr; /* Force 1 column layout */
   }
 }
-
-
