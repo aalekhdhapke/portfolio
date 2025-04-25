@@ -91,71 +91,58 @@
 
     <!-- Home Section -->
 
-    <section id="home" class="d-flex align-items-center">
-      <div class="container">
-        <div class="row align-items-center">
-          <br />
-          <!-- Text Content -->
-          <div class="col-md-6 text-white">
-            <h1>
-              Welcome to my <span style="color: #2bd0ab">Portfolio!</span>
-            </h1>
-
-            <p class="mt-4">
-              I am skilled in HTML, CSS, React.js, JavaScript, Node.js, and
-              Sass. I specialize in developing interactive, responsive, and
-              visually appealing user interfaces while ensuring seamless
-              functionality on both the front end and back end. I am passionate
-              about optimizing performance, enhancing user experience, and
-              implementing scalable solutions for web applications.
-            </p>
-
-            <div class="mt-4">
-              <a href="../portfolio/files/resume.html" class="btn btn-outline-primary">
-                <h5 class="mb-0">My Resume</h5>
-              </a>
-            </div>
-
-            <!-- Social Icons -->
-            <div class="mt-4">
-              <div class="social-icons d-flex gap-3">
-                <a
-                  href="https://join.skype.com/invite/qLNg1suzJAgg"
-                  target="_blank"
-                >
-                  <i class="bx bxl-microsoft-teams"></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/aalekh-dhapke-a2051a313"
-                  target="_blank"
-                >
-                  <i class="bx bxl-linkedin"></i>
-                </a>
-                <a href="https://github.com/dashboard" target="_blank">
-                  <i class="bx bxl-github"></i>
-                </a>
-                <a
-                  href="https://stackoverflow.com/users/26133585/aalekh-dhapke?tab=profile"
-                  target="_blank"
-                >
-                  <i class="bx bxl-stack-overflow"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image Content -->
-          <div class="col-md-6 text-center">
-            <div class="profile-image-wrapper">
-              <img
-                src="../portfolio/assets/images/prtfolioimg.JPG"
-                alt="Profile Image"
-              />
-            </div>
+    <div class="row align-items-center">
+      <!-- Image Content First (Left side) -->
+      <div class="col-md-6 text-center order-md-1 order-2">
+        <div class="profile-image-wrapper">
+          <img
+            src="./assets/images/prtfolioimg Background Removed.png"
+            alt="Profile Image"
+          />
+        </div>
+      </div>
+    
+      <!-- Text Content Second (Right side) -->
+      <div class="col-md-6 text-white order-md-2 order-1">
+        <h1>
+          Welcome to my <span style="color: #2bd0ab">Portfolio!</span>
+        </h1>
+    
+        <p class="mt-4">
+          I am skilled in HTML, CSS, React.js, JavaScript, Node.js, and
+          Sass. I specialize in developing interactive, responsive, and
+          visually appealing user interfaces while ensuring seamless
+          functionality on both the front end and back end. I am passionate
+          about optimizing performance, enhancing user experience, and
+          implementing scalable solutions for web applications.
+        </p>
+    
+        <div class="mt-4">
+          <a href="../portfolio/files/resume.html" class="btn btn-outline-primary">
+            <h5 class="mb-0">My Resume</h5>
+          </a>
+        </div>
+    
+        <!-- Social Icons -->
+        <div class="mt-4">
+          <div class="social-icons d-flex gap-3">
+            <a href="https://join.skype.com/invite/qLNg1suzJAgg" target="_blank">
+              <i class="bx bxl-microsoft-teams"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/aalekh-dhapke-a2051a313" target="_blank">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+            <a href="https://github.com/dashboard" target="_blank">
+              <i class="bx bxl-github"></i>
+            </a>
+            <a href="https://stackoverflow.com/users/26133585/aalekh-dhapke?tab=profile" target="_blank">
+              <i class="bx bxl-stack-overflow"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
-
+    </div>
+    
     <!-- </div> -->
 
     <!-- About Section -->
@@ -192,67 +179,69 @@
     </section>
     <!-- About Section End -->
     <!-- Skills Section -->
-    <section id="skill" class="d-flex align-items-center">
+    <section id="skill" class="d-flex align-items-center py-5">
       <div class="container">
-        <h2 class="text-center text-uppercase fw-bold" style="color: #2bd0ab">
-          My Skills
+        <h2 class="section-title text-center mb-5">
+          <span>What I Can Do</span>
+          <br />
+          <strong>Skills & Proficiencies</strong>
         </h2>
-
-        <div class="row mt-4">
-          <!-- Skill 1 -->
-          <div class="col-md-6 mb-3">
-            <h5>HTML <span class="float-end">99%</span></h5>
-            <div class="progress">
-              <div class="progress-bar bg-success" style="width: 99%"></div>
+    
+        <div class="row">
+          <!-- Frontend and Backend Skills Together -->
+          <div class="col-md-6 mb-4">
+            <div class="skill-item mb-4">
+              <p>HTML <span class="skill-percentage">97%</span></p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 97%"></div>
+              </div>
+            </div>
+    
+            <div class="skill-item mb-4">
+              <p>CSS <span class="skill-percentage">93%</span></p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 93%"></div>
+              </div>
+            </div>
+    
+            <div class="skill-item mb-4">
+              <p>JavaScript <span class="skill-percentage">85%</span></p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 85%"></div>
+              </div>
             </div>
           </div>
-
-          <!-- Skill 2 -->
-          <div class="col-md-6 mb-3">
-            <h5>CSS <span class="float-end">98%</span></h5>
-            <div class="progress">
-              <div class="progress-bar bg-info" style="width: 98%"></div>
+    
+          <div class="col-md-6 mb-4">
+            <div class="skill-item mb-4">
+              <p>React.js <span class="skill-percentage">88%</span></p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 88%"></div>
+              </div>
             </div>
-          </div>
-
-          <!-- Skill 3 -->
-          <div class="col-md-6 mb-3">
-            <h5>JavaScript <span class="float-end">93%</span></h5>
-            <div class="progress">
-              <div class="progress-bar bg-warning" style="width: 93%"></div>
+    
+            <div class="skill-item mb-4">
+              <p>Node.js <span class="skill-percentage">85%</span></p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 85%"></div>
+              </div>
             </div>
-          </div>
-
-          <!-- Skill 4 -->
-          <div class="col-md-6 mb-3">
-            <h5>React.js <span class="float-end">89%</span></h5>
-            <div class="progress">
-              <div class="progress-bar bg-danger" style="width: 89%"></div>
-            </div>
-          </div>
-
-          <!-- Skill 5 -->
-          <div class="col-md-6 mb-3">
-            <h5>Node.js <span class="float-end">85%</span></h5>
-            <div class="progress">
-              <div class="progress-bar bg-primary" style="width: 85%"></div>
-            </div>
-          </div>
-
-          <!-- Skill 6 -->
-          <div class="col-md-6 mb-3">
-            <h5>SCSS <span class="float-end">80%</span></h5>
-            <div class="progress">
-              <div class="progress-bar bg-secondary" style="width: 80%"></div>
+                
+            <div class="skill-item mb-4">
+              <p>SCSS <span class="skill-percentage">80%</span></p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
     <!-- Projects Section -->
     <section id="projects" class="project-tab-section">
       <h2 class="text-center text-uppercase" style="color: #2bd0ab">
-        My Projects
+        My projects
       </h2>
       <div class="tab-container">
         <!-- Radio Buttons -->
@@ -598,4 +587,3 @@
     </div>
   </body>
 </html>
-
